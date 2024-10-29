@@ -2,7 +2,7 @@ import "./TabButton.css";
 
 interface TabButtonProps {
   children: React.ReactNode;
-  isSelected: boolean;
+  isSelected?: boolean;
   onSelect: () => void;
 }
 
