@@ -2,12 +2,16 @@ import "./TabButton.css";
 
 interface TabButtonProps {
   children: React.ReactNode;
+  isSelected: boolean;
+  onSelect: () => void;
 }
 
-function TabButton({ children }: TabButtonProps) {
+function TabButton({ children, onSelect, isSelected }: TabButtonProps) {
   return (
     <li>
-      <button>{children}</button>
+      <button className={isSelected ? "active" : ""} onClick={onSelect}>
+        {children}
+      </button>
     </li>
   );
 }
