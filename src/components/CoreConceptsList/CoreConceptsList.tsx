@@ -1,11 +1,11 @@
 import CoreConcept from "../CoreConcept/CoreConcept";
+import Section from "../Section/Section";
 
 import { CORE_CONCEPTS } from "../../data";
 
 function CoreConceptsList() {
   return (
-    <section id="core-concepts">
-      <h2>Core Concepts</h2>
+    <Section id="core-concepts" title="Core Concepts">
       <ul>
         {CORE_CONCEPTS.map(({ title, description, image }, index) => (
           <li key={index}>
@@ -13,7 +13,7 @@ function CoreConceptsList() {
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }
 
